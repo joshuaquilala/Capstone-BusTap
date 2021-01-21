@@ -6,46 +6,113 @@
     android:layout_height="match_parent"
     tools:context=".FunctionGrid">
 
-    <ImageView
-        android:id="@+id/FindBus"
-        android:layout_width="180dp"
+    <ImageButton
+        android:id="@+id/FindBusButton"
+        android:layout_width="170dp"
         android:layout_height="170dp"
-        android:layout_marginTop="188dp"
+        android:backgroundTint="@android:color/transparent"
+        android:scaleType="fitStart"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintHorizontal_bias="0.145"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.244"
         app:srcCompat="@drawable/findbus" />
 
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="180dp"
+    <ImageButton
+        android:id="@+id/PickMeButton"
+        android:layout_width="170dp"
         android:layout_height="170dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="188dp"
-        app:layout_constraintStart_toEndOf="@+id/FindBus"
+        android:backgroundTint="@android:color/transparent"
+        android:scaleType="fitStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/FindBusButton"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.245"
         app:srcCompat="@drawable/pickup" />
 
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="180dp"
+    <ImageButton
+        android:id="@+id/TrackBusButton"
+        android:layout_width="170dp"
         android:layout_height="170dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView15"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:backgroundTint= "@android:color/transparent"
+        android:scaleType="fitStart"
+        app:layout_constraintEnd_toStartOf="@+id/CheckSchedButton"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FindBus"
+        app:layout_constraintTop_toBottomOf="@+id/FindBusButton"
         app:srcCompat="@drawable/track" />
 
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="180dp"
+    <ImageButton
+        android:id="@+id/CheckSchedButton"
+        android:layout_width="170dp"
         android:layout_height="170dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="36dp"
+        android:backgroundTint= "@android:color/transparent"
+        android:scaleType="fitStart"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8"
+        app:layout_constraintTop_toBottomOf="@+id/PickMeButton"
         app:srcCompat="@drawable/sched" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:fontFamily="@font/amethysta"
+        android:text="Find a Bus"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/FindBusButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/FindBusButton"
+        app:layout_constraintVertical_bias="0.877" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amethysta"
+        android:text="Pick Me Up"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/PickMeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toEndOf="@+id/textView11"
+        app:layout_constraintTop_toTopOf="@+id/PickMeButton"
+        app:layout_constraintVertical_bias="0.877" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:fontFamily="@font/amethysta"
+        android:text="Track the Bus"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/TrackBusButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FindBusButton"
+        app:layout_constraintVertical_bias="0.877" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amethysta"
+        android:text="Check Schedule "
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/CheckSchedButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toEndOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/PickMeButton"
+        app:layout_constraintVertical_bias="0.883" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
