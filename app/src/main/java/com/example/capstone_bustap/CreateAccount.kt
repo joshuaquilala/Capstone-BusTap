@@ -4,21 +4,18 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.Toast
+import android.widget.ImageButton
 
 class CreateAccount : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_account)
 
-        val CreateNextButton = findViewById<Button>(R.id.CreateNextButton)
-        val CreateBackButton = findViewById<Button>(R.id.CreateBackButton)
+        val CreateSignUpButton = findViewById<ImageButton>(R.id.CreateSignUpButton)
 
-        CreateBackButton.setOnClickListener{
-            val intent = Intent(this, Home::class.java)
-            startActivity(intent)
-        }
-        CreateNextButton.setOnClickListener{
+
+
+        CreateSignUpButton.setOnClickListener{
             val intent = Intent(this, Authentication::class.java)
             startActivity(intent)
         }
